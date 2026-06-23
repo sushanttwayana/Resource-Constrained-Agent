@@ -1,0 +1,4 @@
+groq>=0.33.0
+pydantic>=2.6
+ddgs>=9.0.0
+requests>=2.31
