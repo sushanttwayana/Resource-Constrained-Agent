@@ -1,4 +1,4 @@
-# Engineering Decisions
+# Engineering Decisions : As per asked in the task to follow the pattern. 
 
 **1. Model**
 I considered `Groq-hosted models` because they are open-source, readily accessible, and can be used free of charge by obtaining an API key from the Groq Console. I chose `llama-3.3-70b-versatile` because it was stable, available, and performed reliably during development. The model offered strong reasoning and instruction-following capabilities while maintaining fast response times through Groq's inference infrastructure, making it well-suited for the project's agentic workflow. The model selection is controlled through a single environment-variable configuration `(GROQ_MODEL)` so that future model migrations can be performed without modifying the application code.

@@ -1,13 +1,11 @@
-# Test Results
+# Test Results: This includes the scneario based test results along with what the current system that I have built provdes.
 
 > **How to (re)generate this:** 
 - run `python main.py --suite --trace`
 > The per-task mechanics below (budget caps, stagnation/replan triggers, tool
-> behaviour) were verified offline with a deterministic test harness. The
-> end-to-end task narratives depend on the live model and live web results —
-> run the suite with your key and confirm/replace the "Live outcome" lines with
-> your actual output before submitting.
-
+> behaviour) were provided by this system/agent that we have built. It depends > on the llm that has been used so the Live Outcome provided here and while 
+> running in your might be slightly different. 
+ 
 ## Verified offline (deterministic, no model/network)
 
 - **Calculator** correctly evaluates arithmetic, rejects non-arithmetic input
