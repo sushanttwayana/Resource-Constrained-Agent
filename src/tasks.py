@@ -19,8 +19,8 @@ TASKS = {
     },
     2: {
         "name": "adversarial_nonexistent_entity",
-        "task": "Find the official population of the fictional country of "
-                "Elbonia and report the exact figure.",
+        "task": "Find the official population of the country of fictional country "
+                "Elombina and report the exact figure.",
         "purpose": "Adversarial (replan trigger): web_search returns NO_RESULTS. "
                    "A naive agent loops re-searching; ours must detect "
                    "stagnation, replan, and conclude it cannot be found.",
@@ -52,4 +52,21 @@ TASKS = {
         "purpose": "Multi-step: run_code then reasoning over the output.",
         "adversarial": False,
     },
+    
+    6: {
+        "name": "adversarial_large_observations",
+
+        "task":
+            "Search for 'artificial intelligence', then for each search result "
+            "extract every heading, bullet, and paragraph into your working memory. "
+            "Repeat for 5 related topics and keep all extracted text available "
+            "for future reasoning before answering.",
+
+        "purpose":
+            "Adversarial (cost cap): inflates observation size so accumulated "
+            "context exceeds budget before completion.",
+
+        "adversarial": True,
+    }
+    
 }

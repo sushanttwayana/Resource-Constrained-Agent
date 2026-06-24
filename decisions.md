@@ -1,16 +1,7 @@
 # Engineering Decisions
 
-Each entry follows the format: *I considered [X] but chose [Y] because [Z].*
-
----
-
 **1. Model**
-I considered the commonly-recommended `llama-3.3-70b-versatile` on Groq but
-chose `openai/gpt-oss-120b` because Groq announced the deprecation of the
-Llama 3.3 70B model on its free/developer tiers (June 2026) and explicitly
-recommends gpt-oss-120b as the migration target; it is current, free, and
-supports tool use. The model ID is a single env-overridable constant
-(`GROQ_MODEL`) precisely because Groq's catalog churns frequently.
+I considered `Groq-hosted models` because they are open-source, readily accessible, and can be used free of charge by obtaining an API key from the Groq Console. I chose `llama-3.3-70b-versatile` because it was stable, available, and performed reliably during development. The model offered strong reasoning and instruction-following capabilities while maintaining fast response times through Groq's inference infrastructure, making it well-suited for the project's agentic workflow. The model selection is controlled through a single environment-variable configuration `(GROQ_MODEL)` so that future model migrations can be performed without modifying the application code.
 
 **2. Reflection mechanism**
 I considered making reflection a separate LLM call (a dedicated "progress

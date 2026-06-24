@@ -7,13 +7,14 @@ import json
 import os
 
 from groq import Groq
-
+from dotenv import load_dotenv
 from .schema import AgentState, BudgetExhaustedError
 
-# Single config point. Groq's catalog churns; swap this one constant if the
-# model is deprecated. As of build time gpt-oss-120b is current & free and is
-# Groq's recommended replacement for the now-deprecated llama-3.3-70b-versatile.
-MODEL_ID = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
+load_dotenv()
+
+### groq models 
+# MODEL_ID = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
+MODEL_ID = os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")
 
 _client: Groq | None = None
 

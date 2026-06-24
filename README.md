@@ -94,8 +94,7 @@ forced by requiring a strict JSON object with exactly one of `action` /
 cannot answer in prose without acting; **progress checking** is required as a
 mandatory `progress` field every turn; **budget awareness** is injected each turn
 as a live "BUDGET REMAINING: N calls, $X" line plus an instruction to prefer the
-cheapest tool and to stop when a task is impossible. On a replan, a `*** REPLAN
-REQUIRED ***` block is injected naming the failure and forbidding repetition.
+cheapest tool and to stop when a task is impossible. On a replan,a `REPLAN REQUIRED` block is injected naming the failure and forbidding repetition.
 
 ## Failure Modes
 

@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from src.agent import report, run_agent, Tracer  # noqa: E402
 from src.schema import AgentState, BudgetTracker  # noqa: E402
-from tasks import TASKS  # noqa: E402
+from src.tasks import TASKS  # noqa: E402
 
 
 def run_one(task_text: str, dump_trace: bool = False) -> AgentState:

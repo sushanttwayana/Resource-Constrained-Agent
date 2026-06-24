@@ -15,8 +15,11 @@ import subprocess
 import sys
 import tempfile
 from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutureTimeout
+from dotenv import load_dotenv
 
 import requests
+
+load_dotenv()
 
 WEB_TIMEOUT = 10
 CODE_TIMEOUT = 15

@@ -96,6 +96,8 @@ class AgentState(BaseModel):
     replan_count: int = 0
     error: Optional[str] = None
 
+    
+    ### this truncates large observations so a single huge tool result cannot blow the context (and so we can reason about token cost)
     def render_scratchpad(self) -> str:
         """Format the history as the LLM sees it. Observations are truncated
         defensively so a single huge tool result cannot blow the context (and
